@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ing. En Proceso | Dashboard</title>
+    <!-- Google Fonts: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body class="dashboard-body">
+    <!-- Navegación -->
+    <nav class="navbar">
+        <div class="logo">Ing. En Proceso. <span
+                style="font-size: 0.8rem; font-weight: 400; color: var(--gray);">Dashboard</span></div>
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="nav-links" id="nav-links">
+            <a href="index.html">Volver al Blog</a>
+        </div>
+    </nav>
+
+    <main class="dashboard-container">
+        <div class="dashboard-header text-center">
+            <h1>Panel de Control</h1>
+            <p>Tu espacio personal para redactar, revisar y gestionar tu contenido.</p>
+        </div>
+
+        <div class="grid-layout">
+            <!-- Editor (Lado izquierdo) -->
+            <section class="editor-section glass">
+                <h2>Redactar Nuevo Artículo</h2>
+                <form id="article-form">
+                    <div class="form-group">
+                        <label for="title">Título del Artículo</label>
+                        <input type="text" id="title" required placeholder="Ej. Cómo empezar con Vanilla JS en 2026">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="content">Contenido</label>
+                        <textarea id="content" rows="12" required
+                            placeholder="Escribe el cuerpo de tu artículo aquí..."></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-primary w-full shadow-glow">Publicar Artículo</button>
+                </form>
+            </section>
+
+            <!-- Lista de Artículos (Lado derecho) -->
+            <aside class="management-section glass">
+                <h2>Mis Publicaciones</h2>
+                <div class="article-list" id="dashboard-article-list">
+                    <!-- Los artículos del localStorage aparecerán aquí -->
+                </div>
+
+                <hr class="separator">
+                <button id="clear-all" class="btn-danger w-full mt-2">Borrar Todo (Peligro)</button>
+            </aside>
+        </div>
+    </main>
+
+    <script src="js/menu.js"></script>
+    <script src="js/dashboard.js"></script>
+</body>
+
+</html>

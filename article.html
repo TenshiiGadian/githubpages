@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artículo | Mi Universo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .article-detail-section {
+            padding: 120px 8%;
+            max-width: 900px;
+            margin: 0 auto;
+            min-height: 80vh;
+        }
+
+        .article-detail-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .article-detail-category {
+            color: var(--secondary);
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 1rem;
+            display: inline-block;
+        }
+
+        .article-detail-title {
+            font-size: 3.5rem;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+        }
+
+        .article-detail-date {
+            color: var(--gray);
+            font-size: 1rem;
+        }
+
+        .article-detail-content {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: var(--light);
+            white-space: pre-wrap;
+            /* Respeta los saltos de línea del textarea */
+            background: var(--darker);
+            padding: 3rem;
+            border-radius: 20px;
+            border: 1px solid var(--glass-border);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            color: var(--gray);
+            text-decoration: none;
+            margin-bottom: 2rem;
+            transition: color 0.3s;
+            font-weight: 600;
+        }
+
+        .back-link:hover {
+            color: var(--primary);
+        }
+
+        .back-link span {
+            margin-right: 0.5rem;
+        }
+    </style>
+</head>
+
+<body class="dashboard-body">
+    <!-- Navegación -->
+    <nav class="navbar">
+        <div class="logo">MiUniverso.</div>
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="nav-links" id="nav-links">
+            <a href="index.html">Volver al Inicio</a>
+            <a href="dashboard.html" class="btn-dashboard">Dashboard</a>
+        </div>
+    </nav>
+
+    <main class="article-detail-section" id="article-detail-container">
+        <!-- Contenido generado dinámicamente o mensaje de carga -->
+        <h2 style="text-align: center; color: var(--gray);">Cargando artículo...</h2>
+    </main>
+
+    <!-- Sección de Comentarios -->
+    <section class="comments-section" id="comments-section"
+        style="display: none; padding: 0 8% 100px; max-width: 900px; margin: 0 auto; z-index: 2; position: relative;">
+        <h3 style="margin-bottom: 2rem; font-size: 2rem;">Comentarios</h3>
+
+        <!-- Formulario para agregar comentario -->
+        <div class="comment-form-container glass" style="padding: 2.5rem; margin-bottom: 3rem;">
+            <h4 style="margin-bottom: 1.5rem; font-size: 1.2rem;">Deja un comentario</h4>
+            <form id="comment-form">
+                <div class="form-group" style="margin-bottom: 1.5rem;">
+                    <label for="comment-author">Nombre (Opcional)</label>
+                    <input type="text" id="comment-author" placeholder="Tu nombre o se publicará como 'Anónimo'">
+                </div>
+                <div class="form-group" style="margin-bottom: 1.5rem;">
+                    <label for="comment-content">Mensaje</label>
+                    <textarea id="comment-content" rows="4" required
+                        placeholder="Escribe tu opinión o dudas..."></textarea>
+                </div>
+                <button type="submit" class="btn-primary w-full shadow-glow">Enviar Comentario</button>
+            </form>
+        </div>
+
+        <!-- Lista de Comentarios -->
+        <div id="comments-list" class="comments-list" style="display: flex; flex-direction: column; gap: 1.5rem;">
+            <p style="color: var(--gray);">Cargando comentarios...</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 202 Bianchi Ingenieria. Creado con pura magia y tecnologías Vanilla.</p>
+    </footer>
+
+    <script src="js/menu.js"></script>
+    <script src="js/article.js"></script>
+</body>
+
+</html>
