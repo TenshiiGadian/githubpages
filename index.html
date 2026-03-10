@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ing. En Proceso | Blog</title>
+    <meta name="description" content="Blog personal sobre tecnología, desarrollo y vida.">
+    <!-- Google Fonts: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <!-- Navegación -->
+    <nav class="navbar">
+        <div class="logo">Ing. En Proceso.</div>
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="nav-links" id="nav-links">
+            <a href="#home" class="active">Inicio</a>
+            <a href="#articles">Artículos</a>
+            <a href="#about">Sobre Mí</a>
+            <!--<a href="dashboard.html" class="btn-dashboard">Dashboard</a>-->
+        </div>
+    </nav>
+
+    <!-- Sección 1: Hero (Bienvenida) -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Bienvenido a mi <span>Portafolio de Ingeniería</span></h1>
+            <p>Diseño de circuitos, automatización industrial y
+                desarrollo de software. Aquí comparto mis proyectos y el
+                camino hacia la digitalización de procesos.</p>
+            <a href="#articles" class="btn-primary">Explorar Contenido</a>
+        </div>
+
+        <!-- Elementos decorativos (Glassmorphism blobs) -->
+        <div class="hero-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+        </div>
+    </section>
+
+    <!-- Sección 2: Artículos -->
+    <section class="articles-section" id="articles">
+        <h2>Últimas Publicaciones</h2>
+        <div class="articles-grid" id="articles-container">
+            <!-- Los artículos se inyectan en este contenedor desde app.js -->
+            <p class="no-articles">Cargando la magia...</p>
+        </div>
+    </section>
+
+    <!-- Sección 3: Sobre Mí / Contacto -->
+    <section class="about-section" id="about">
+        <div class="about-card glass">
+            <h2>Sobre Mí</h2>
+            <p>
+                Diseñador de circuitos por vocación y entusiasta de los idiomas por curiosidad.
+                Actualmente estoy sumergido en el mundo de los PLCs, sensores y SCADA,
+                buscando entender cómo conectar todo en la industria moderna.
+                Soy de los que cree que el cuerpo se entrena tan duro como la mente: si no me encuentras soldando o
+                programando,
+                probablemente esté entrenando Karate o practicando caracteres en Chino.
+                No pretendo saberlo todo, solo soy un Ing. en Proceso compartiendo sus avances.
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Ing. En Proceso. Creado con tecnologías Vanilla (HTML/CSS/JS).</p>
+    </footer>
+
+    <script src="js/menu.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>
